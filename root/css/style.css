@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+:root {
+  --btn-background: rgb(242, 95, 58);
+  --btn-hover: rgb(255, 239, 234);
+  --title-color: rgb(35, 44, 81);
+  --text-strong: rgb(29, 30, 37);
+  --text-medium: rgb(143, 148, 167);
+  --text-light: rgb(249, 249, 249);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Be Vietnam Pro', 'sans-serif';
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  color: var(--text-medium);
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8%;
+}
+
+/*              HEADER                 */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav,
+header .container > a {
+  display: none;
+}
+
+header .logo {
+  width: 70px;
+  display: block;
+}
+
+.hamburger-menu img {
+  width: 18px;
+  display: block;
+}
+
+/*              MAIN                 */
+
+/*    SECTION INTRODUCTION     */
+.introduction {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.introduction-image img {
+  width: 100%;
+}
