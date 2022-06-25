@@ -9,6 +9,7 @@
   --text-light: rgb(249, 249, 249);
 }
 
+/*              GENERAL                 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,25 +27,43 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h6 {
   color: var(--title-color);
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 p {
+  margin-top: 1rem;
   color: var(--text-medium);
-  text-align: center;
+  line-height: 1.8rem;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 8%;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 8px rgba(242, 97, 59, 0.5);
+  display: inline-block;
+}
+
+.btn-cta {
+  background-color: var(--btn-background);
 }
 
 /*              HEADER                 */
@@ -75,8 +94,69 @@ header .logo {
 .introduction {
   display: flex;
   flex-direction: column-reverse;
+  text-align: center;
+}
+
+.introduction .btn {
+  margin-top: 2rem;
 }
 
 .introduction-image img {
   width: 100%;
+}
+
+/*    SECTION PRODUCT DESCRIPTION     */
+.product-description {
+  margin-top: 6rem;
+}
+
+.brief {
+  text-align: center;
+}
+
+.key-products ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+.key-products li {
+  counter-increment: item;
+}
+
+.key-products li::before {
+  content: counter(item);
+  background-color: var(--btn-background);
+  display: inline-block;
+  color: white;
+  padding: 0.7rem 2.5rem;
+  border-radius: 2rem;
+}
+
+.key-products h6 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/*    SECTION REVIEWS     */
+.reviews {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.reviews h2 {
+  margin-bottom: 5rem;
+}
+
+.review-card {
+  background-color: var(--text-light);
+  padding: 0 1rem;
+}
+
+.review-card img {
+  width: 60px;
+  margin-top: -30px;
+}
+
+.card-hidden {
+  display: none;
 }
