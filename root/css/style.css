@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
 
 :root {
-  --btn-background: rgb(242, 95, 58);
+  --main-background: rgb(242, 95, 58);
   --btn-hover: rgb(255, 239, 234);
   --background-light: #fafafa;
+  --background-dark: #1e1e26;
   --title-color: rgb(35, 44, 81);
   --text-strong: rgb(29, 30, 37);
   --text-medium: rgb(143, 148, 167);
@@ -59,13 +60,14 @@ p {
 }
 
 .container-dark {
-  background-color: var(--btn-background);
+  background-color: var(--main-background);
 }
 
 .btn {
   text-decoration: none;
   color: white;
   padding: 1rem 2rem;
+  border: none;
   border-radius: 2rem;
   box-shadow: 0px 4px 8px rgba(242, 97, 59, 0.5);
   display: inline-block;
@@ -74,12 +76,12 @@ p {
 }
 
 .btn-cta {
-  background-color: var(--btn-background);
+  background-color: var(--main-background);
 }
 
 .btn-light {
   background-color: white;
-  color: var(--btn-background);
+  color: var(--main-background);
 }
 
 /*              HEADER                 */
@@ -141,7 +143,7 @@ header .logo {
 
 .key-products li::before {
   content: counter(item);
-  background-color: var(--btn-background);
+  background-color: var(--main-background);
   display: inline-block;
   color: white;
   padding: 0.7rem 2.5rem;
@@ -191,7 +193,7 @@ header .logo {
 }
 
 .carousel-control li {
-  border: 1px solid var(--btn-background);
+  border: 1px solid var(--main-background);
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -199,7 +201,7 @@ header .logo {
 }
 
 .carousel-selected {
-  background-color: var(--btn-background);
+  background-color: var(--main-background);
 }
 
 /*    SECTION CALL TO ACTION     */
@@ -211,4 +213,81 @@ header .logo {
 .call-to-action h3 {
   color: white;
   margin-bottom: 2rem;
+}
+
+/*              FOOTER                 */
+footer {
+  background-color: var(--background-dark);
+}
+
+footer .container {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mail-form {
+  order: 0;
+  width: 100%;
+}
+
+.mail-form form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mail-form input {
+  background-color: white;
+  border: none;
+  border-radius: 1.4rem;
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  flex-shrink: 1;
+  min-width: 100px;
+}
+
+.page-links {
+  order: 1;
+  max-width: 200px;
+}
+
+.page-links > ul {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.page-links li a {
+  color: var(--text-light);
+  text-decoration: none;
+  display: inline-block;
+  width: 90px;
+  line-height: 3rem;
+}
+
+.social-media {
+  order: 2;
+  margin-top: 3rem;
+  width: 80%;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container .logo {
+  order: 3;
+  margin-top: 3rem;
+}
+
+footer .container > p {
+  order: 4;
+  margin-top: 3rem;
+  font-size: 1rem;
 }
