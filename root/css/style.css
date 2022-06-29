@@ -25,6 +25,7 @@ html {
 
 body {
   font-size: 1.2rem;
+  overflow-x: hidden;
 }
 
 h1,
@@ -37,7 +38,6 @@ h6 {
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: -0.3rem;
 }
 
 h2 {
@@ -70,7 +70,6 @@ p {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 0px 4px 8px rgba(242, 97, 59, 0.5);
   display: inline-block;
   cursor: pointer;
   font-size: 1.3rem;
@@ -78,11 +77,21 @@ p {
 
 .btn-cta {
   background-color: var(--main-background);
+  box-shadow: 0px 4px 8px rgba(242, 97, 59, 0.5);
+}
+
+.btn-cta:hover {
+  background-color: #ff7e5b;
+  box-shadow: 0px 4px 8px #ff7e5b;
 }
 
 .btn-light {
   background-color: white;
   color: var(--main-background);
+}
+
+.btn-light:hover {
+  background-color: #fff2ef;
 }
 
 /*              HEADER                 */
@@ -92,8 +101,11 @@ header .container {
   align-items: center;
 }
 
-header nav,
-header .container > a {
+header nav {
+  display: none;
+}
+
+header .container .btn {
   display: none;
 }
 
@@ -117,6 +129,10 @@ header nav li a {
   text-decoration: none;
   color: #242e52;
   font-size: 1.3rem;
+}
+
+header nav li a:hover {
+  color: rgb(197, 197, 197);
 }
 
 /*              MAIN                 */
@@ -145,6 +161,10 @@ header nav li a {
   text-align: center;
 }
 
+.key-products {
+  margin-top: 3rem;
+}
+
 .key-products ol {
   list-style: none;
   counter-reset: item;
@@ -152,20 +172,34 @@ header nav li a {
 
 .key-products li {
   counter-increment: item;
+  margin-bottom: 3rem;
 }
 
-.key-products li::before {
-  content: counter(item);
+.key-products .title-wrapper::before {
+  content: '0' counter(item);
   background-color: var(--main-background);
   display: inline-block;
   color: white;
   padding: 0.7rem 2.5rem;
   border-radius: 2rem;
+  z-index: 10;
+  position: relative;
+}
+
+.title-wrapper {
+  display: flex;
+  width: fit-content;
 }
 
 .key-products h6 {
   font-weight: 700;
   font-size: 1.2rem;
+  display: inline-block;
+  padding: 0.75rem 3rem;
+  margin-left: -20px;
+  z-index: 1;
+  background-color: #fff0ec;
+  width: calc(100vw - 2rem);
 }
 
 /*    SECTION REVIEWS     */
@@ -224,7 +258,7 @@ header nav li a {
 /*    SECTION CALL TO ACTION     */
 .call-to-action {
   text-align: center;
-  padding: 8rem 16rem;
+  padding: 8rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -291,15 +325,26 @@ footer .container {
   line-height: 3rem;
 }
 
-.social-media {
+.container-logo-media {
   order: 2;
   margin-top: 3rem;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media {
+  width: 100%;
 }
 
 .social-media-container {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 200px;
+  gap: 10px;
 }
 
 footer .container .logo {
@@ -320,8 +365,11 @@ footer .container > p {
     padding: 4rem 6rem;
   }
   /*              HEADER                 */
-  header nav,
-  header .container > a {
+  header nav {
+    display: block;
+  }
+
+  header .container .btn {
     display: block;
   }
 
@@ -342,6 +390,7 @@ footer .container > p {
 
   .introduction-text h1 {
     font-size: 5.8rem;
+    letter-spacing: -0.3rem;
   }
 
   .introduction-text p {
@@ -383,6 +432,11 @@ footer .container > p {
     flex-basis: 50%;
   }
 
+  .key-products h6 {
+    width: auto;
+    background-color: transparent;
+  }
+
   .reviews h2 {
     font-size: 4rem;
   }
@@ -402,11 +456,57 @@ footer .container > p {
   .call-to-action {
     flex-direction: row;
     margin-top: 18rem;
-    padding: 6rem 16rem;
     text-align: start;
+    margin-top: 0;
+    padding: 2rem 0;
   }
 
   .call-to-action h3 {
     width: 400px;
+    margin: 0;
+  }
+
+  /*              FOOTER                 */
+  footer .container {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .container-logo-media {
+    order: 0;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0;
+    align-self: stretch;
+    padding: 1rem 0;
+  }
+
+  footer .container .logo {
+    margin-top: 0;
+  }
+
+  .social-media-container {
+    margin: 0;
+  }
+
+  .social-media {
+    justify-content: space-between;
+  }
+
+  .page-links {
+    order: 1;
+  }
+
+  .page-links ul {
+    margin: 0;
+  }
+
+  .mail-form {
+    order: 2;
+  }
+
+  footer .container > p {
+    margin-top: 0;
   }
 }
