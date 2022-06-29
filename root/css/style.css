@@ -196,7 +196,7 @@ header nav li a:hover {
   font-size: 1.2rem;
   display: inline-block;
   padding: 0.75rem 3rem;
-  margin-left: -20px;
+  margin-left: -1rem;
   z-index: 1;
   background-color: #fff0ec;
   width: calc(100vw - 2rem);
@@ -430,11 +430,16 @@ footer .container > p {
 
   .key-products {
     flex-basis: 50%;
+    margin-top: 1rem;
   }
 
   .key-products h6 {
     width: auto;
     background-color: transparent;
+  }
+
+  .key-products p {
+    margin-left: 8.5rem;
   }
 
   .reviews h2 {
