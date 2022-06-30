@@ -94,6 +94,7 @@ p {
   background-color: #fff2ef;
 }
 
+
 /*              HEADER                 */
 header .container {
   display: flex;
@@ -325,6 +326,10 @@ footer .container {
   line-height: 3rem;
 }
 
+.page-links li a:hover {
+  color: var(--main-background)
+}
+
 .container-logo-media {
   order: 2;
   margin-top: 3rem;
@@ -343,8 +348,13 @@ footer .container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 200px;
-  gap: 10px;
+  max-width: 150px;
+  gap: 5px;
+}
+
+.social-media-container i {
+  color: white;
+  font-size: 2rem;
 }
 
 footer .container .logo {
@@ -502,21 +512,27 @@ footer .container > p {
 
   .page-links {
     order: 1;
+    max-width: 450px;
   }
 
   .page-links ul {
     margin: 0;
   }
 
+  .page-links li a {
+    width: 150px;
+  }
+
   .mail-form {
     order: 2;
     align-self: start;
+    width: fit-content;
   }
 
   footer .container > p {
     margin-top: 0;
     position: absolute;
     bottom: 4rem;
-    right: 15%;
+    right: 5%;
   }
 }
