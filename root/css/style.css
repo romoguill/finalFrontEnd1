@@ -36,12 +36,12 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -55,7 +55,7 @@ p {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 3rem 2rem;
 }
@@ -93,7 +93,6 @@ p {
 .btn-light:hover {
   background-color: #fff2ef;
 }
-
 
 /*              HEADER                 */
 header .container {
@@ -144,6 +143,36 @@ header nav li a:hover {
   flex-direction: column-reverse;
   text-align: center;
 }
+
+.pill-background {
+  position: absolute;
+  background-image: url('../img/bg-tablet-pattern.svg');
+  background-size: 400px;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 600px;
+  z-index: -1;
+}
+
+.pill-1 {
+  background-position: bottom 270px left;
+  left: 100px;
+  top: 0;
+  background-size: 400px;
+}
+
+.pill-2 {
+  background-position: bottom left;
+  background-size: 300px;
+  left: 200px;
+}
+
+/* .introduction-text {
+  background-image: url('../img/bg-tablet-pattern.svg');
+  background-position: bottom left 200px;
+  background-size: 400px;
+  background-repeat: no-repeat;
+} */
 
 .introduction .btn {
   margin-top: 2rem;
@@ -327,7 +356,7 @@ footer .container {
 }
 
 .page-links li a:hover {
-  color: var(--main-background)
+  color: var(--main-background);
 }
 
 .container-logo-media {
@@ -355,6 +384,10 @@ footer .container {
 .social-media-container i {
   color: white;
   font-size: 2rem;
+}
+
+.social-media-container i:hover {
+  color: var(--main-background);
 }
 
 footer .container .logo {
@@ -428,11 +461,11 @@ footer .container > p {
 
   .brief h2 {
     font-size: 3.6rem;
-    width: 70%;
+    width: 80%;
   }
 
   .brief p {
-    width: 50%;
+    width: 60%;
     font-size: 1.6rem;
     color: black;
     line-height: 2.5rem;
@@ -496,6 +529,7 @@ footer .container > p {
     margin-top: 0;
     align-self: stretch;
     padding: 1rem 0;
+    max-width: 300px;
   }
 
   footer .container .logo {
@@ -512,7 +546,7 @@ footer .container > p {
 
   .page-links {
     order: 1;
-    max-width: 450px;
+    max-width: 400px;
   }
 
   .page-links ul {
@@ -526,6 +560,11 @@ footer .container > p {
   .mail-form {
     order: 2;
     align-self: start;
+    margin-right: auto;
+  }
+
+  .mail-form form {
+    margin-left: auto;
     width: fit-content;
   }
 
@@ -534,5 +573,9 @@ footer .container > p {
     position: absolute;
     bottom: 4rem;
     right: 5%;
+  }
+
+  .pill-background {
+    display: none;
   }
 }
